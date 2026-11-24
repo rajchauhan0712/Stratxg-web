@@ -5,10 +5,14 @@ import { site } from '../content/site'
 import { PageHero } from '../components/ui/PageHero'
 import { Section } from '../components/ui/Section'
 import { AnimatedCard } from '../components/ui/AnimatedCard'
+import { Seo } from '../components/Seo'
+import { pageSeo } from '../content/seo'
 
 export function IndustriesPage() {
+  const seo = pageSeo.industries
   return (
     <>
+      <Seo title={seo.title} description={seo.description} path={seo.path} />
       <PageHero
         title="Industries"
         subtitle="Sector expertise across education, healthcare, infrastructure, technology, utilities, and more."

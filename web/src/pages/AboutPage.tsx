@@ -2,13 +2,17 @@ import { about } from '../content/about'
 import { PageHero } from '../components/ui/PageHero'
 import { Section } from '../components/ui/Section'
 import { AnimatedCard } from '../components/ui/AnimatedCard'
+import { Seo } from '../components/Seo'
+import { pageSeo } from '../content/seo'
 import { ExternalLink } from 'lucide-react'
 
 export function AboutPage() {
   const { pageTitle, whoWeAre, recognitions, leaders, usp } = about
+  const seo = pageSeo.about
 
   return (
     <>
+      <Seo title={seo.title} description={seo.description} path={seo.path} />
       <PageHero
         title={pageTitle.title}
         subtitle={pageTitle.subtitle}

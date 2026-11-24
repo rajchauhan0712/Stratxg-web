@@ -11,6 +11,11 @@ export function PageHero({ title, subtitle, background }: Props) {
         <img
           src={background}
           alt=""
+          width={1600}
+          height={600}
+          decoding="async"
+          loading="eager"
+          fetchPriority="low"
           className="absolute inset-0 h-full w-full object-cover opacity-40"
         />
       )}

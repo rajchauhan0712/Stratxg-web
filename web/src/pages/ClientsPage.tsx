@@ -2,10 +2,14 @@ import { clients } from '../content/clients'
 import { PageHero } from '../components/ui/PageHero'
 import { Section } from '../components/ui/Section'
 import { AnimatedCard } from '../components/ui/AnimatedCard'
+import { Seo } from '../components/Seo'
+import { pageSeo } from '../content/seo'
 
 export function ClientsPage() {
+  const seo = pageSeo.clients
   return (
     <>
+      <Seo title={seo.title} description={seo.description} path={seo.path} />
       <PageHero
         title={clients.pageTitle.title}
         subtitle={clients.pageTitle.subtitle}

@@ -1,12 +1,51 @@
 export const home = {
   hero: {
     brand: 'StratXG',
-    headline: 'Reinvigorating the Growth through Strategic Repositioning',
     support:
       'Enabling new ways of doing business through strategy, digital transformation, and sustainable growth.',
     primaryCta: { label: 'Get in touch', to: '/contact' },
     secondaryCta: { label: 'Explore offerings', to: '/#offerings' },
-    image: '/hero/hero-1.jpg',
+    /** Autoplay interval; paused for reduced-motion / hover / hidden tab */
+    intervalMs: 6500,
+    /** Live stratxg.com hero carousel messages + optimized local assets */
+    slides: [
+      {
+        headline: 'Reinvigorating the Growth through Strategic Repositioning',
+        image: '/hero/hero-1.jpg',
+        imageWebp: '/hero/hero-1.webp',
+        alt: 'Strategic repositioning workshop with StratXG consultants',
+      },
+      {
+        headline: 'Enabling new ways of doing business',
+        image: '/hero/hero-2.jpg',
+        imageWebp: '/hero/hero-2.webp',
+        alt: 'Teams collaborating on new business models',
+      },
+      {
+        headline: 'Embracing Digital Business Transformation',
+        image: '/hero/hero-3.jpg',
+        imageWebp: '/hero/hero-3.webp',
+        alt: 'Digital transformation and immersive technology',
+      },
+      {
+        headline: 'Staying at the forefront of global business innovation',
+        image: '/hero/hero-4.jpg',
+        imageWebp: '/hero/hero-4.webp',
+        alt: 'Global business innovation and leadership',
+      },
+      {
+        headline: 'Profitable, relevant and leading the disruption',
+        image: '/hero/hero-5.jpg',
+        imageWebp: '/hero/hero-5.webp',
+        alt: 'Business leaders driving profitable disruption',
+      },
+      {
+        headline: 'Redefining The Rules Of The Game',
+        image: '/hero/hero-6.jpg',
+        imageWebp: '/hero/hero-6.webp',
+        alt: 'Redefining competitive strategy with StratXG',
+      },
+    ],
   },
 
   pillars: [
@@ -29,22 +68,38 @@ export const home = {
   ],
 
   successPhilosophy: {
-    sectionTitle: 'Success Philosophy | Approach',
+    sectionTitle: 'Success Philosophy',
+    description:
+      'Three connected movements that keep clients profitable, relevant, and ready for change.',
     items: [
       {
         title: 'Strategy',
-        body: 'Partnering in Profitable and Sustainable Growth, Understanding Business Critical Challenges, Sustainable Business Model –Existing and New, Distrupting the competetive landscape',
         image: '/images/team/strategy.jpeg',
+        points: [
+          'Partnering in profitable and sustainable growth',
+          'Understanding business-critical challenges',
+          'Sustainable models — existing and new',
+          'Disrupting the competitive landscape',
+        ],
       },
       {
         title: 'Transformation',
-        body: 'Dramatically transforming the ways in which product & services are consumed and business is conducted, Inexorably adopting a digital business model, Promoting digital solutions and ubiquitous communication mediums',
         image: '/images/team/transformation.jpeg',
+        points: [
+          'Reworking how products and services are consumed',
+          'Adopting a digital business model end to end',
+          'Promoting digital solutions and communication',
+        ],
       },
       {
         title: 'Growth',
-        body: 'Leading to Higher Revenues, Eliminating Revenue Leakages, Cost Optimization & Productivity enhancement, Governance framework, Continual improvment model, Performance improvement program, To stay profitable, relevant and on the forefront of change',
         image: '/images/team/growth.jpeg',
+        points: [
+          'Higher revenues and fewer leakages',
+          'Cost optimization and productivity',
+          'Governance and continual improvement',
+          'Staying profitable and ahead of change',
+        ],
       },
     ],
   },
@@ -140,7 +195,8 @@ export const home = {
   },
 
   incubators: {
-    sectionTitle: 'Our Business Association With Incubator Institutions',
+    eyebrow: 'Our Business Association With Incubator Institutions',
+    sectionTitle: 'Incubator Partners',
     body: 'Our Proud association with Atal Incubation Center-Rabindrath Tagore University (AIC-RNTU) & Center of Social Entrepreneurship at the Tata Institute Of Social Sciences (TISS) supported by Atal Innovation Mission Of NITI Aayog',
     commitment:
       'This shows our commitment to create a sustainable change in the society/marketplace through our innovative enterprise',
@@ -173,6 +229,6 @@ export const home = {
     title: 'Are You Ready to Succeed?',
     body: 'Be ready with us — get a quote or request a conversation with our team.',
     primary: { label: 'Get Quote', to: '/contact' },
-    secondary: { label: 'Contact us', to: '/contact' },
+    secondary: { label: 'Contact us' },
   },
 }

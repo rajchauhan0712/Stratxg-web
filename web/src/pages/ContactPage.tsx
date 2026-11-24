@@ -6,6 +6,8 @@ import { contact } from '../content/contact'
 import { PageHero } from '../components/ui/PageHero'
 import { Section } from '../components/ui/Section'
 import { Button } from '../components/ui/Button'
+import { Seo } from '../components/Seo'
+import { pageSeo } from '../content/seo'
 
 type FormState = {
   name: string
@@ -20,6 +22,7 @@ export function ContactPage() {
   const [form, setForm] = useState<FormState>(initial)
   const [submitting, setSubmitting] = useState(false)
   const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined
+  const seo = pageSeo.contact
 
   async function onSubmit(e: FormEvent) {
     e.preventDefault()
@@ -58,6 +61,7 @@ export function ContactPage() {
 
   return (
     <>
+      <Seo title={seo.title} description={seo.description} path={seo.path} />
       <PageHero
         title={contact.pageTitle.title}
         subtitle={contact.pageTitle.subtitle}

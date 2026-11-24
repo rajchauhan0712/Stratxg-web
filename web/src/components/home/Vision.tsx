@@ -7,16 +7,18 @@ export function Vision() {
   return (
     <>
       <Section title={vision.sectionTitle} description={vision.subtitle}>
-        <div className="rounded-2xl border border-line bg-surface-elevated p-4 md:p-8">
-          <img
-            src={vision.image}
-            alt="StratXG vision roadmap"
-            className="mx-auto w-full max-w-4xl h-auto"
-          />
-        </div>
+        <img
+          src={vision.image}
+          alt="StratXG vision roadmap"
+          width={1611}
+          height={962}
+          loading="lazy"
+          className="mx-auto w-full max-w-5xl h-auto object-contain"
+        />
       </Section>
 
       <Section
+        eyebrow={incubators.eyebrow}
         title={incubators.sectionTitle}
         description={incubators.body}
         className="!pt-0"
@@ -26,12 +28,13 @@ export function Vision() {
           {incubators.logos.map((logo) => (
             <div
               key={logo.src}
-              className="flex items-center justify-center rounded-xl border border-line bg-white p-6 min-h-28"
+              className="flex items-center justify-center rounded-xl border border-line bg-white px-4 py-5 md:px-5 md:py-6 min-h-32"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="max-h-16 w-auto object-contain"
+                loading="lazy"
+                className="max-h-20 md:max-h-24 w-full object-contain"
               />
             </div>
           ))}

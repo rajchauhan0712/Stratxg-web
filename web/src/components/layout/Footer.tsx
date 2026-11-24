@@ -1,23 +1,13 @@
 import { Link } from 'react-router-dom'
 import { externalLinks, navLinks, site } from '../../content/site'
+import { BrandMark } from '../ui/BrandMark'
 
 export function Footer() {
   return (
     <footer className="bg-brand text-white">
       <div className="mx-auto max-w-6xl px-5 md:px-8 py-16 grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <Link to="/" className="inline-flex items-center gap-3">
-            <img
-              src={site.logoWhite || site.logo}
-              alt={site.name}
-              className="h-10 w-auto brightness-0 invert [clip-path:inset(2px)]"
-              onError={(e) => {
-                e.currentTarget.src = site.logo
-                e.currentTarget.className = 'h-10 w-auto [clip-path:inset(2px)]'
-              }}
-            />
-            <span className="font-display text-xl font-semibold">{site.name}</span>
-          </Link>
+          <BrandMark variant="light" />
           <p className="mt-4 max-w-sm text-white/65 leading-relaxed">
             {site.tagline}. Digital consulting for strategy, transformation, and
             sustainable growth.

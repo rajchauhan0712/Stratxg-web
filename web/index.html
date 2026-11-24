@@ -4,17 +4,80 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#361134" />
+    <meta name="robots" content="index,follow" />
     <meta
       name="description"
-      content="StratXG — Digital consulting for strategy, transformation, and growth."
+      content="StratXG Consulting — strategy, digital transformation, and growth advisory across healthcare, infrastructure, edutainment, renewable energy, and more."
     />
+    <link rel="canonical" href="https://www.stratxg.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="StratXG" />
+    <meta property="og:title" content="StratXG | Strategy · Transformation · Growth" />
+    <meta
+      property="og:description"
+      content="StratXG Consulting — strategy, digital transformation, and growth advisory across healthcare, infrastructure, edutainment, renewable energy, and more."
+    />
+    <meta property="og:url" content="https://www.stratxg.com/" />
+    <meta property="og:image" content="https://www.stratxg.com/hero/hero-1.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="StratXG | Strategy · Transformation · Growth" />
+    <meta
+      name="twitter:description"
+      content="StratXG Consulting — strategy, digital transformation, and growth advisory across healthcare, infrastructure, edutainment, renewable energy, and more."
+    />
+    <meta name="twitter:image" content="https://www.stratxg.com/hero/hero-1.jpg" />
+
+    <!-- LCP: preload first hero (WebP preferred) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hero/hero-1.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
     <title>StratXG | Strategy · Transformation · Growth</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "StratXG Consulting Private Limited",
+        "alternateName": "StratXG",
+        "url": "https://www.stratxg.com/",
+        "logo": "https://www.stratxg.com/images/logo.png",
+        "email": "info@stratxg.com",
+        "telephone": ["+91-9769211415", "+91-8700692070"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ILESEUM GLC Bavdhan 18 DSK Ranwara Rd, Pakharbaug Society, Ram Nagar, Bavdhan",
+          "addressLocality": "Pune",
+          "postalCode": "411021",
+          "addressCountry": "IN"
+        },
+        "sameAs": ["https://www.stratxg.com/"]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
