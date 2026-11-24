@@ -1,0 +1,9 @@
+
+RewriteEngine On
+
+# Set the base directory to your project folder
+RewriteBase /STRATXG/
+
+# Redirect to the project directory only if not already there
+RewriteCond %{REQUEST_URI} !^/STRATXG/
+RewriteRule ^(.*)$ /STRATXG/$1 [L]

@@ -1,0 +1,36 @@
+body{
+	color: #361134;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #361134;
+}
+
+.team-round-shadow .team-photo img {
+    width: 50%;
+}
+/*
+
+.purple-bg {
+  height: auto;
+  background: #361134;
+}
+
+.team .team-info span {
+	color: #FFF;
+}
+.team .team-info  h5 {
+    color: #FFF;
+}
+.team .team-info  h5 :hover {
+    color: #19C8A3;
+}
+.team .aboutus span {
+	color: #361134;
+}
+.team .aboutus h5 {
+	color: #361134;
+}
+.team .team-description {
+    padding: 10px 5px;
+}
+*/

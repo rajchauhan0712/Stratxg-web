@@ -1,0 +1,21 @@
+.error {
+    color: red;
+}
+
+.course {
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+
+.card1 {
+    transition: 0.4s ease-out;
+}
+
+.card1:hover {
+    overflow: hidden;
+    box-shadow: 4px 10px 14px #cecece;
+    border-radius: 40px;
+    transform: translate(2px, 2px);
+
+}
