@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
@@ -7,11 +7,33 @@ import { usePrefersReducedMotion } from '../../hooks/usePrefersReducedMotion'
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const reduced = usePrefersReducedMotion()
 
+  useEffect(() => {
+    const update = () => setScrolled(window.scrollY > 12)
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    return () => window.removeEventListener('scroll', update)
+  }, [])
+
+  const motionSafe = reduced
+    ? 'transition-none'
+    : 'transition-[height,box-shadow,background-color,border-color] duration-[var(--duration-fast)] ease-[var(--ease-out-quart)]'
+
   return (
-    <header className="sticky top-0 z-50 border-b border-line/70 bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 md:px-8 h-16 md:h-18">
+    <header
+      className={`sticky top-0 z-50 border-b bg-white/95 backdrop-blur-md ${motionSafe} ${
+        scrolled
+          ? 'border-line/80 shadow-[0_8px_24px_-18px_rgba(54,17,52,0.45)]'
+          : 'border-line/70 shadow-none'
+      }`}
+    >
+      <div
+        className={`mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 md:px-8 ${motionSafe} ${
+          scrolled ? 'h-12 md:h-14' : 'h-16 md:h-18'
+        }`}
+      >
         <Link
           to="/"
           className="flex items-center shrink-0 rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-accent/60 active:scale-[0.98] transition-transform duration-[var(--duration-fast)] ease-[var(--ease-out-quart)]"
@@ -21,7 +43,11 @@ export function Header() {
           <img
             src={site.logo}
             alt={site.name}
-            className="h-10 w-auto select-none [clip-path:inset(2px)]"
+            className={`w-auto select-none [clip-path:inset(2px)] ${
+              reduced
+                ? ''
+                : 'transition-[height] duration-[var(--duration-fast)] ease-[var(--ease-out-quart)]'
+            } ${scrolled ? 'h-7 md:h-8' : 'h-10'}`}
           />
         </Link>
 
@@ -31,7 +57,9 @@ export function Header() {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `font-display text-sm px-3 py-2 rounded-md transition-colors duration-[var(--duration-fast)] ${
+                `font-display text-sm rounded-md transition-[color,background-color,padding] duration-[var(--duration-fast)] ease-[var(--ease-out-quart)] ${
+                  scrolled ? 'px-2.5 py-1.5' : 'px-3 py-2'
+                } ${
                   isActive
                     ? 'text-brand bg-brand/[0.06]'
                     : 'text-ink-muted hover:text-brand hover:bg-brand/[0.04]'
