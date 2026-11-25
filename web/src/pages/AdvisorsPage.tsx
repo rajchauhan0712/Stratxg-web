@@ -18,6 +18,7 @@ export function AdvisorsPage() {
 
       <Section
         title={advisors.sectionTitle}
+        eyebrow="Expertise at the table"
         description="Seasoned mentors across education, technology, healthcare, energy, and markets."
       >
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -25,20 +26,22 @@ export function AdvisorsPage() {
             <AnimatedCard
               key={person.name}
               delay={(i % 6) * 0.04}
-              className="rounded-xl border border-line bg-surface-elevated overflow-hidden group cursor-default"
+              className="surface-card group h-full overflow-hidden"
             >
-              <div className="aspect-square overflow-hidden bg-line/40">
+              <div className="relative aspect-[4/3] overflow-hidden bg-line/40">
                 <img
                   src={person.image}
                   alt={person.name}
-                  className="h-full w-full object-cover object-top transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.03]"
+                  loading={i < 4 ? 'eager' : 'lazy'}
+                  className="h-full w-full object-cover object-top transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-[1.04]"
                 />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-brand/35 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
               </div>
-              <div className="p-4">
-                <h3 className="font-display text-base font-semibold text-brand">
+              <div className="flex h-[7.5rem] flex-col p-5">
+                <h3 className="font-display text-lg font-semibold leading-snug text-brand">
                   {person.name}
                 </h3>
-                <p className="mt-1 text-sm text-ink-muted leading-snug">
+                <p className="mt-2 line-clamp-2 text-sm leading-5 text-ink-muted">
                   {person.title}
                 </p>
               </div>

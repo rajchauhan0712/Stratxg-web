@@ -7,14 +7,16 @@ export function Vision() {
   return (
     <>
       <Section title={vision.sectionTitle} description={vision.subtitle}>
-        <img
-          src={vision.image}
-          alt="StratXG vision roadmap"
-          width={1611}
-          height={962}
-          loading="lazy"
-          className="mx-auto w-full max-w-5xl h-auto object-contain"
-        />
+        <div className="surface-card overflow-hidden p-3 sm:p-6 lg:p-8">
+          <img
+            src={vision.image}
+            alt="StratXG vision roadmap"
+            width={1611}
+            height={962}
+            loading="lazy"
+            className="mx-auto h-auto w-full max-w-5xl object-contain"
+          />
+        </div>
       </Section>
 
       <Section
@@ -28,7 +30,7 @@ export function Vision() {
           {incubators.logos.map((logo) => (
             <div
               key={logo.src}
-              className="flex items-center justify-center rounded-xl border border-line bg-white px-4 py-5 md:px-5 md:py-6 min-h-32"
+              className="surface-card flex min-h-32 items-center justify-center px-4 py-5 transition-transform duration-300 hover:-translate-y-1 md:px-5 md:py-6"
             >
               <img
                 src={logo.src}
@@ -48,11 +50,11 @@ export function Vision() {
         <p className="mt-6 max-w-3xl text-white/70 leading-relaxed">
           {digitalIndia.body}
         </p>
-        <div className="mt-10 flex flex-wrap gap-4 items-center">
+        <div className="mt-10 flex flex-wrap items-center gap-3">
           {digitalIndia.logos.map((src) => (
             <div
               key={src}
-              className="rounded-lg bg-white/95 px-3 py-2 flex items-center justify-center min-h-14"
+              className="flex min-h-14 items-center justify-center rounded-lg bg-white/95 px-3 py-2"
             >
               <img src={src} alt="" className="max-h-10 w-auto object-contain" />
             </div>

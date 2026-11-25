@@ -54,10 +54,20 @@ export function Seo({
     upsertMeta('property', 'og:description', description)
     upsertMeta('property', 'og:url', url)
     upsertMeta('property', 'og:image', image)
+    upsertMeta(
+      'property',
+      'og:image:alt',
+      'Formula 1 pit crew working together during a race',
+    )
     upsertMeta('name', 'twitter:card', defaultSeo.twitterCard)
     upsertMeta('name', 'twitter:title', title)
     upsertMeta('name', 'twitter:description', description)
     upsertMeta('name', 'twitter:image', image)
+    upsertMeta(
+      'name',
+      'twitter:image:alt',
+      'Formula 1 pit crew working together during a race',
+    )
     upsertLink('canonical', url)
   }, [title, description, path, image, noIndex])
 

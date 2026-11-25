@@ -1,6 +1,6 @@
 export const advisors = {
   pageTitle: {
-    title: 'Organization Culture We Hold',
+    title: 'A culture built on trust and curiosity',
     subtitle:
       'Based on Trust, Fostering Creativity, Encouraging to Experiment, Trying Out New Ideas, Not be afraid of Failure',
     background: '/images/bg/13.jpg',

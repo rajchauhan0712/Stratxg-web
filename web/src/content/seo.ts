@@ -9,7 +9,7 @@ export const defaultSeo = {
   title: `${site.name} | Strategy · Transformation · Growth`,
   description:
     'StratXG Consulting — strategy, digital transformation, and growth advisory across healthcare, infrastructure, edutainment, renewable energy, and more.',
-  ogImage: `${siteOrigin}/hero/hero-1.jpg`,
+  ogImage: `${siteOrigin}/hero/92af2-01.jpg`,
   twitterCard: 'summary_large_image' as const,
 }
 

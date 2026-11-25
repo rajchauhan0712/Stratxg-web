@@ -9,8 +9,9 @@ export const site = {
     'ILESEUM GLC Bavdhan 18 DSK Ranwara Rd, Pakharbaug Society, Ram Nagar, Bavdhan Pune. 411021',
   logo: '/images/logo.png',
   logoWhite: '/images/logo-white.png',
-  legacyBaseUrl:
-    import.meta.env.VITE_LEGACY_BASE_URL ?? 'https://www.stratxg.com',
+  legacyBaseUrl: (
+    import.meta.env.VITE_LEGACY_BASE_URL ?? 'https://www.stratxg.com'
+  ).replace(/\/+$/, ''),
 }
 
 export const navLinks = [
@@ -22,9 +23,16 @@ export const navLinks = [
   { label: 'Contact', to: '/contact' },
 ] as const
 
+export const exploreLinks = [
+  { label: 'Academy', to: '/academy' },
+  { label: 'Careers', to: '/careers' },
+  { label: 'Media', to: '/media' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'VentureCap', to: '/venturecap' },
+  { label: 'Videos', to: '/videos' },
+  { label: 'Corporate responsibility', to: '/csr' },
+] as const
+
 export const externalLinks = [
-  { label: 'Academy', href: `${site.legacyBaseUrl}/academy.php` },
-  { label: 'VentureCap', href: `${site.legacyBaseUrl}/vc.php` },
-  { label: 'Media', href: `${site.legacyBaseUrl}/media.php` },
   { label: 'Login', href: `${site.legacyBaseUrl}/login.php` },
 ] as const

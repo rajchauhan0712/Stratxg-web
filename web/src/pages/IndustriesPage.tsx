@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { industries } from '../content/industries'
-import { site } from '../content/site'
 import { PageHero } from '../components/ui/PageHero'
 import { Section } from '../components/ui/Section'
 import { AnimatedCard } from '../components/ui/AnimatedCard'
@@ -20,45 +19,45 @@ export function IndustriesPage() {
 
       <Section
         title="Where we create impact"
-        description="Explore our industry focus areas. Detailed sector pages remain on the live site for now."
+        description="Specialist teams combine sector knowledge with practical strategy, technology, and delivery experience."
       >
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {industries.map((industry, i) => (
             <AnimatedCard
               key={industry.slug}
               delay={(i % 4) * 0.05}
-              className="rounded-xl border border-line bg-surface-elevated p-6 group"
+              className="group h-full"
             >
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="font-display text-xs font-semibold uppercase tracking-[0.14em] text-accent-dark mb-2">
+              <Link
+                to={`/industries/${industry.slug}`}
+                className="surface-card flex h-full flex-col p-6 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-brand/20 hover:shadow-[0_24px_50px_-34px_rgba(50,19,63,0.38)] focus-visible:outline"
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <p className="font-display text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-accent-dark">
                     {industry.navLabel}
                   </p>
-                  <h3 className="font-display text-xl font-semibold text-brand text-balance">
-                    {industry.title}
-                  </h3>
+                  <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-brand/[0.05] text-brand transition-colors group-hover:bg-brand group-hover:text-white">
+                    <ArrowUpRight size={17} />
+                  </span>
                 </div>
-                <a
-                  href={`${site.legacyBaseUrl}/${industry.slug}.php`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="shrink-0 inline-flex size-9 items-center justify-center rounded-md border border-line text-ink-muted hover:text-brand hover:border-brand/30 transition-colors active:scale-[0.97]"
-                  aria-label={`Open ${industry.navLabel} on live site`}
-                >
-                  <ArrowUpRight size={16} />
-                </a>
-              </div>
-              <p className="mt-4 text-sm leading-relaxed text-ink-muted">
-                {industry.summary}
-              </p>
+                <h3 className="mt-5 font-display text-xl font-semibold leading-snug tracking-[-0.02em] text-brand text-balance">
+                  {industry.title}
+                </h3>
+                <p className="mt-3 line-clamp-4 flex-1 text-sm leading-6 text-ink-muted">
+                  {industry.summary}
+                </p>
+                <span className="mt-5 inline-flex items-center gap-2 font-display text-sm font-semibold text-brand">
+                  Explore sector <ArrowUpRight size={15} aria-hidden="true" />
+                </span>
+              </Link>
             </AnimatedCard>
           ))}
         </div>
 
         <p className="mt-10 text-sm text-ink-muted">
           Looking for a specific engagement?{' '}
-          <Link to="/contact" className="text-brand underline underline-offset-4">
-            Contact our team
+          <Link to="/contact" className="font-semibold text-brand underline underline-offset-4">
+            Talk to our team
           </Link>
           .
         </p>

@@ -11,6 +11,17 @@
       content="StratXG Consulting — strategy, digital transformation, and growth advisory across healthcare, infrastructure, edutainment, renewable energy, and more."
     />
     <link rel="canonical" href="https://www.stratxg.com/" />
+    <script>
+      if (location.pathname === '/' || location.pathname === '/index.php') {
+        const heroPreload = document.createElement('link')
+        heroPreload.rel = 'preload'
+        heroPreload.as = 'image'
+        heroPreload.href = '/hero/92af2-01.webp'
+        heroPreload.type = 'image/webp'
+        heroPreload.fetchPriority = 'high'
+        document.head.appendChild(heroPreload)
+      }
+    </script>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -21,7 +32,11 @@
       content="StratXG Consulting — strategy, digital transformation, and growth advisory across healthcare, infrastructure, edutainment, renewable energy, and more."
     />
     <meta property="og:url" content="https://www.stratxg.com/" />
-    <meta property="og:image" content="https://www.stratxg.com/hero/hero-1.jpg" />
+    <meta property="og:image" content="https://www.stratxg.com/hero/92af2-01.jpg" />
+    <meta
+      property="og:image:alt"
+      content="Formula 1 pit crew working together during a race"
+    />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -30,33 +45,100 @@
       name="twitter:description"
       content="StratXG Consulting — strategy, digital transformation, and growth advisory across healthcare, infrastructure, edutainment, renewable energy, and more."
     />
-    <meta name="twitter:image" content="https://www.stratxg.com/hero/hero-1.jpg" />
-
-    <!-- LCP: preload first hero (WebP preferred) -->
-    <link
-      rel="preload"
-      as="image"
-      href="/hero/hero-1.webp"
-      type="image/webp"
-      fetchpriority="high"
+    <meta name="twitter:image" content="https://www.stratxg.com/hero/92af2-01.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="Formula 1 pit crew working together during a race"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
     </noscript>
 
     <title>StratXG | Strategy · Transformation · Growth</title>
+
+    <style>
+      .boot-loader {
+        min-height: 100vh;
+        color: #fff;
+        font-family: Inter, "Segoe UI", sans-serif;
+        animation: boot-pulse 1.4s ease-in-out infinite;
+      }
+      .boot-header {
+        height: 5rem;
+        padding: 0 max(1.25rem, calc((100vw - 80rem) / 2));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        border-bottom: 1px solid #e9e5e9;
+      }
+      .boot-header img { width: 8.75rem; height: auto; }
+      .boot-nav { display: flex; gap: .75rem; }
+      .boot-nav span {
+        width: 3.2rem;
+        height: .65rem;
+        border-radius: 999px;
+        background: #32133f12;
+      }
+      .boot-hero {
+        min-height: min(39rem, calc(100svh - 5rem));
+        padding: 4rem max(1.25rem, calc((100vw - 80rem) / 2));
+        display: flex;
+        align-items: end;
+        background: linear-gradient(110deg, #230c2d, #32133f 65%, #472052);
+      }
+      .boot-copy { width: min(100%, 48rem); padding-bottom: 2rem; }
+      .boot-line {
+        height: .85rem;
+        margin-top: 1rem;
+        border-radius: .4rem;
+        background: #ffffff20;
+      }
+      .boot-line.eyebrow { width: 5rem; height: .5rem; background: #91c84b70; }
+      .boot-line.title { width: 78%; height: 3rem; margin-top: 1.5rem; }
+      .boot-line.subtitle { width: 52%; margin-top: 1.25rem; }
+      .boot-cards {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: .75rem;
+        width: min(calc(100% - 2.5rem), 80rem);
+        margin: -2rem auto 0;
+      }
+      .boot-card {
+        height: 10rem;
+        border: 1px solid #e9e5e9;
+        border-radius: 1rem;
+        background: #fff;
+        box-shadow: 0 16px 40px -32px #2212273d;
+      }
+      @keyframes boot-pulse {
+        50% { opacity: .62; }
+      }
+      @media (max-width: 760px) {
+        .boot-nav { display: none; }
+        .boot-hero { min-height: 34rem; }
+        .boot-line.title { width: 94%; height: 2.3rem; }
+        .boot-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .boot-card { height: 8rem; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-loader { animation: none; }
+      }
+    </style>
 
     <script type="application/ld+json">
       {
@@ -80,7 +162,28 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="boot-loader" role="status" aria-label="Loading page">
+        <div class="boot-header">
+          <img src="/images/logo.png" alt="StratXG" width="500" height="113" />
+          <div class="boot-nav" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="boot-hero" aria-hidden="true">
+          <div class="boot-copy">
+            <div class="boot-line eyebrow"></div>
+            <div class="boot-line title"></div>
+            <div class="boot-line subtitle"></div>
+            <div class="boot-line" style="width: 34%; margin-top: 1.5rem"></div>
+          </div>
+        </div>
+        <div class="boot-cards" aria-hidden="true">
+          <div class="boot-card"></div><div class="boot-card"></div>
+          <div class="boot-card"></div><div class="boot-card"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

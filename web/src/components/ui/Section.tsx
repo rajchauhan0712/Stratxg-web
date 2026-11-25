@@ -24,11 +24,11 @@ export function Section({
   return (
     <section
       id={id}
-      className={`py-20 md:py-28 ${dark ? 'bg-brand text-white' : ''} ${className}`}
+      className={`py-16 md:py-20 lg:py-24 ${dark ? 'bg-brand text-white' : ''} ${className}`}
     >
-      <div className={`mx-auto w-full max-w-6xl px-5 md:px-8 ${containerClassName}`}>
+      <div className={`mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10 ${containerClassName}`}>
         {(eyebrow || title || description) && (
-          <header className="mb-12 max-w-3xl">
+          <header className="mb-9 max-w-3xl md:mb-12">
             {eyebrow && (
               <p
                 className={`font-display text-xs font-semibold uppercase tracking-[0.18em] mb-3 ${
@@ -40,7 +40,7 @@ export function Section({
             )}
             {title && (
               <h2
-                className={`text-3xl md:text-4xl text-balance ${
+                className={`font-display text-3xl font-semibold tracking-[-0.025em] md:text-[2.5rem] text-balance ${
                   dark ? 'text-white' : 'text-ink'
                 }`}
               >
@@ -49,7 +49,7 @@ export function Section({
             )}
             {description && (
               <p
-                className={`mt-4 text-lg leading-relaxed ${
+                className={`mt-4 max-w-2xl text-base leading-7 sm:text-lg sm:leading-8 ${
                   dark ? 'text-white/75' : 'text-ink-muted'
                 }`}
               >

@@ -10,10 +10,10 @@ export const home = {
     /** Live stratxg.com hero carousel messages + optimized local assets */
     slides: [
       {
-        headline: 'Reinvigorating the Growth through Strategic Repositioning',
-        image: '/hero/hero-1.jpg',
-        imageWebp: '/hero/hero-1.webp',
-        alt: 'Strategic repositioning workshop with StratXG consultants',
+        headline: 'Reignite growth through strategic repositioning',
+        image: '/hero/92af2-01.jpg',
+        imageWebp: '/hero/92af2-01.webp',
+        alt: 'A Formula 1 pit crew working together during a race',
       },
       {
         headline: 'Enabling new ways of doing business',
@@ -34,10 +34,10 @@ export const home = {
         alt: 'Global business innovation and leadership',
       },
       {
-        headline: 'Profitable, relevant and leading the disruption',
-        image: '/hero/hero-5.jpg',
-        imageWebp: '/hero/hero-5.webp',
-        alt: 'Business leaders driving profitable disruption',
+        headline: 'Stay relevant. Grow with confidence.',
+        image: '/images/bg/20.jpg',
+        imageWebp: '/images/bg/20.webp',
+        alt: 'Sustainable growth taking root',
       },
       {
         headline: 'Redefining The Rules Of The Game',

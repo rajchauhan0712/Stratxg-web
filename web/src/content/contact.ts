@@ -2,8 +2,8 @@ import { site } from './site'
 
 export const contact = {
   pageTitle: {
-    title: 'Welcome to stratXG',
-    subtitle: 'Now Think The Unthinkable With StratXG',
+    title: 'Let’s talk about what’s next',
+    subtitle: 'Tell us where you want to go. We’ll help you find a practical way forward.',
     background: '/images/bg/02.jpg',
   },
   company: site.legalName,

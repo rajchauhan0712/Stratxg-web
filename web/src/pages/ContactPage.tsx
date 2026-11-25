@@ -66,24 +66,31 @@ export function ContactPage() {
         title={contact.pageTitle.title}
         subtitle={contact.pageTitle.subtitle}
         background={contact.pageTitle.background}
+        showCta={false}
       />
 
       <Section title={contact.heading} description={contact.intro}>
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <aside className="space-y-6">
-            <p className="font-display text-lg text-brand">{contact.tagline}</p>
-            <div className="space-y-4 text-sm text-ink-muted">
+        <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-10">
+          <aside className="surface-card h-fit rounded-2xl bg-brand p-6 text-white sm:p-8">
+            <p className="font-display text-xl font-medium leading-snug text-white sm:text-2xl">
+              {contact.tagline}
+            </p>
+            <p className="mt-3 text-sm leading-6 text-white/70">
+              Our team is ready to help with strategy, transformation, and
+              growth.
+            </p>
+            <div className="mt-8 space-y-5 text-sm text-white/80">
               <p className="flex gap-3">
-                <MapPin className="shrink-0 text-accent-dark mt-0.5" size={18} />
-                <span>{contact.address}</span>
+                <MapPin className="mt-0.5 shrink-0 text-accent" size={18} />
+                <span className="leading-6">{contact.address}</span>
               </p>
               {contact.phones.map((phone) => (
                 <a
                   key={phone}
                   href={`tel:${phone.replace(/\s/g, '')}`}
-                  className="flex gap-3 hover:text-brand transition-colors"
+                  className="flex items-center gap-3 transition-colors hover:text-white"
                 >
-                  <Phone className="shrink-0 text-accent-dark" size={18} />
+                  <Phone className="shrink-0 text-accent" size={18} />
                   {phone}
                 </a>
               ))}
@@ -91,22 +98,22 @@ export function ContactPage() {
                 <a
                   key={email}
                   href={`mailto:${email}`}
-                  className="flex gap-3 hover:text-brand transition-colors"
+                  className="flex items-center gap-3 transition-colors hover:text-white"
                 >
-                  <Mail className="shrink-0 text-accent-dark" size={18} />
+                  <Mail className="shrink-0 text-accent" size={18} />
                   {email}
                 </a>
               ))}
             </div>
 
-            <div className="pt-4 border-t border-line">
-              <p className="font-display text-xs font-semibold uppercase tracking-[0.14em] text-accent-dark mb-3">
+            <div className="mt-8 border-t border-white/15 pt-5">
+              <p className="mb-3 font-display text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                 Presence
               </p>
-              <p className="text-sm text-ink-muted mb-2">
+              <p className="mb-2 text-sm leading-6 text-white/70">
                 India: {contact.presence.india.join(' · ')}
               </p>
-              <p className="text-sm text-ink-muted">
+              <p className="text-sm leading-6 text-white/70">
                 International: {contact.presence.international.join(' · ')}
               </p>
             </div>
@@ -114,8 +121,7 @@ export function ContactPage() {
 
           <form
             onSubmit={onSubmit}
-            className="rounded-2xl border border-line bg-surface-elevated p-6 md:p-8 space-y-5"
-            noValidate
+            className="surface-card space-y-5 rounded-2xl p-6 sm:p-8"
           >
             {(
               [
@@ -130,6 +136,20 @@ export function ContactPage() {
                 </span>
                 <input
                   type={type}
+                  autoComplete={
+                    key === 'name'
+                      ? 'name'
+                      : key === 'email'
+                        ? 'email'
+                        : 'tel'
+                  }
+                  placeholder={
+                    key === 'name'
+                      ? 'Your name'
+                      : key === 'email'
+                        ? 'you@company.com'
+                        : '+1 (555) 000-0000'
+                  }
                   value={form[key]}
                   onChange={(e) =>
                     setForm((prev) => ({ ...prev, [key]: e.target.value }))
@@ -145,6 +165,7 @@ export function ContactPage() {
                 Comment*
               </span>
               <textarea
+                placeholder="Tell us a little about what you need..."
                 value={form.message}
                 onChange={(e) =>
                   setForm((prev) => ({ ...prev, message: e.target.value }))

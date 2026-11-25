@@ -15,15 +15,15 @@ export function Pillars() {
             <AnimatedCard
               key={pillar.title}
               delay={i * 0.06}
-              className="rounded-xl bg-surface-elevated border border-line p-6 shadow-[0_12px_40px_-24px_rgba(54,17,52,0.35)] cursor-default"
+              className="surface-card h-full p-6 transition-[transform,border-color,box-shadow] duration-300 hover:-translate-y-1 hover:border-brand/20 hover:shadow-[0_24px_50px_-34px_rgba(50,19,63,0.38)]"
             >
-              <div className="inline-flex size-10 items-center justify-center rounded-lg bg-brand/8 text-brand mb-4">
+              <div className="mb-5 inline-flex size-11 items-center justify-center rounded-xl bg-brand/[0.06] text-brand">
                 <Icon size={20} strokeWidth={1.75} />
               </div>
-              <h3 className="font-display text-lg font-semibold text-brand">
+              <h3 className="font-display text-xl font-semibold leading-snug text-brand">
                 {pillar.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+              <p className="mt-3 text-sm leading-6 text-ink-muted">
                 {pillar.body}
               </p>
             </AnimatedCard>

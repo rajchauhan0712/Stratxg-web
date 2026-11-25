@@ -1,6 +1,6 @@
 export const clients = {
   pageTitle: {
-    title: 'Our Clients and Strategic partners',
+    title: 'Our clients and strategic partners',
     subtitle: 'Expanding Horizons',
     background: '/images/bg/03.jpg',
   },
