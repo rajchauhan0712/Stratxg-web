@@ -21,11 +21,14 @@ const IndustriesPage = lazy(async () => ({
 const ContactPage = lazy(async () => ({
   default: (await import('./pages/ContactPage')).ContactPage,
 }))
+const DemosPage = lazy(async () => ({
+  default: (await import('./pages/DemosPage')).DemosPage,
+}))
 const AcademyPage = lazy(async () => ({
   default: (await import('./pages/LegacyPages')).AcademyPage,
 }))
 const CareersPage = lazy(async () => ({
-  default: (await import('./pages/LegacyPages')).CareersPage,
+  default: (await import('./pages/CareersPage')).CareersPage,
 }))
 const CsrPage = lazy(async () => ({
   default: (await import('./pages/LegacyPages')).CsrPage,
@@ -70,6 +73,8 @@ export default function App() {
           <Route path="industries/:slug" element={<IndustryDetailPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="contact.php" element={<ContactPage />} />
+          <Route path="demos" element={<DemosPage />} />
+          <Route path="demos.php" element={<DemosPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="business.php" element={<ServicesPage />} />
           <Route path="academy" element={<AcademyPage />} />

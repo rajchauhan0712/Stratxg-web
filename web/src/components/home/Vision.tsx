@@ -20,7 +20,6 @@ export function Vision() {
       </Section>
 
       <Section
-        eyebrow={incubators.eyebrow}
         title={incubators.sectionTitle}
         description={incubators.body}
         className="!pt-0"

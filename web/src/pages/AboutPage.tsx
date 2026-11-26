@@ -96,6 +96,51 @@ export function AboutPage() {
       </Section>
 
       <Section
+        title="Recognition & Certifications"
+        description="Our recognitions, certifications, and the values that guide our work."
+        className="bg-white"
+      >
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {recognitions.images.map((image) => (
+            <li
+              key={image.src}
+              className="surface-card flex min-h-44 items-center justify-center rounded-xl p-5"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                className="max-h-36 w-full object-contain"
+              />
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section
+        title="StratXG Highlights"
+        description="A few moments from our events, recognitions, and learning initiatives."
+      >
+        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {about.highlights.map((image) => (
+            <li
+              key={image.src}
+              className="surface-card overflow-hidden rounded-xl"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                decoding="async"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      <Section
         title={leaders.sectionTitle}
         eyebrow="Leadership"
         className="bg-white"
@@ -160,6 +205,16 @@ export function AboutPage() {
             </AnimatedCard>
           ))}
         </div>
+      </Section>
+
+      <Section title="Our Sector Expertise" className="bg-white">
+        <img
+          src={about.sectorExpertise.image}
+          alt={about.sectorExpertise.alt}
+          loading="lazy"
+          decoding="async"
+          className="surface-card h-auto w-full rounded-2xl"
+        />
       </Section>
     </>
   )

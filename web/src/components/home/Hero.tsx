@@ -221,22 +221,10 @@ export function Hero() {
             })}
           </div>
 
-          <p className="hero-support mt-4 max-w-md text-base leading-7 text-white/85 opacity-0 md:mt-5 md:max-w-lg md:text-lg">
-            {hero.support}
-          </p>
-
           <div className="hero-cta mt-6 flex flex-wrap items-center gap-3 opacity-0">
             <Button to={hero.primaryCta.to} variant="onDark" size="md">
               {hero.primaryCta.label}
               <ArrowDownRight className="h-4 w-4" aria-hidden />
-            </Button>
-            <Button
-              to={hero.secondaryCta.to}
-              variant="secondary"
-              size="md"
-              className="!border-white/40 !text-white hover:!border-white hover:!bg-white/10"
-            >
-              {hero.secondaryCta.label}
             </Button>
           </div>
 

@@ -28,6 +28,13 @@ We embrace new ways of doing business through Digital Business Transformation, L
 
   recognitions: {
     title: 'Our Recognitions',
+    images: [
+      { src: '/images/credo.png', alt: 'StratXG credo: trust, integrity, innovation, and collaboration' },
+      { src: '/images/siliconcetificate.PNG', alt: 'Silicon India Learning and Development recognition certificate' },
+      { src: '/images/new_logo_ing_hwe.jpg', alt: 'International Accreditation Service mark' },
+      { src: '/images/IAFLogo.jpg', alt: 'International Accreditation Forum mark' },
+      { src: '/images/cssc.png', alt: 'Council for Six Sigma Certification mark' },
+    ],
     items: [
       'Top 10 Learning & Development Company in Mumbai - Silicon India Magazine',
       'Knowledge Partner & Incubatee of Tata Institute of Social Sciences (TISS) Mumbai & NITI Aayog',
@@ -36,6 +43,23 @@ We embrace new ways of doing business through Digital Business Transformation, L
       'An ISO 9001 : 2015 & ISO/IEC 27001 : 2013 Certified Company',
       'Trusted by global clients AdipoLabs Korea, Statkraft Norway, Indian oil Corporation, Bennett Coleman & Company',
     ],
+  },
+
+  highlights: [
+    { src: '/images/first.jpeg', alt: 'StratXG receiving a Chief Strategy Officer award' },
+    { src: '/images/second.jpeg', alt: 'StratXG leadership at the Chief Strategy Officer Summit' },
+    { src: '/images/fifth.jpeg', alt: 'StratXG speaker at the GUTEC Upstream Technology Expo' },
+    { src: '/images/sixth.jpeg', alt: 'StratXG team at the GUTEC Upstream Technology Expo' },
+    { src: '/images/seventh.jpeg', alt: 'StratXG representatives with a community peace initiative' },
+    { src: '/images/eightth.jpeg', alt: 'StratXG team and students at an education event' },
+    { src: '/images/ninth.jpeg', alt: 'Students receiving certificates at a StratXG learning event' },
+    { src: '/images/tenth.PNG', alt: 'StratXG participating in an online industry discussion' },
+    { src: '/images/eleventh.PNG', alt: 'StratXG participating in a virtual startup discussion' },
+  ],
+
+  sectorExpertise: {
+    image: '/images/sector_expertise.PNG',
+    alt: 'StratXG sector expertise across core infrastructure, green energy, utilities, information technology, fintech, and emerging sectors',
   },
 
   leaders: {

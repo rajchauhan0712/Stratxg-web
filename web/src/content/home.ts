@@ -1,16 +1,13 @@
 export const home = {
   hero: {
     brand: 'StratXG',
-    support:
-      'Enabling new ways of doing business through strategy, digital transformation, and sustainable growth.',
-    primaryCta: { label: 'Get in touch', to: '/contact' },
-    secondaryCta: { label: 'Explore offerings', to: '/#offerings' },
+    primaryCta: { label: 'learn more', to: '/about' },
     /** Autoplay interval; paused for reduced-motion / hover / hidden tab */
     intervalMs: 6500,
     /** Live stratxg.com hero carousel messages + optimized local assets */
     slides: [
       {
-        headline: 'Reignite growth through strategic repositioning',
+        headline: 'Reinvigorating the Growth through Strategic Repositioning',
         image: '/hero/92af2-01.jpg',
         imageWebp: '/hero/92af2-01.webp',
         alt: 'A Formula 1 pit crew working together during a race',
@@ -34,10 +31,10 @@ export const home = {
         alt: 'Global business innovation and leadership',
       },
       {
-        headline: 'Stay relevant. Grow with confidence.',
-        image: '/images/bg/20.jpg',
-        imageWebp: '/images/bg/20.webp',
-        alt: 'Sustainable growth taking root',
+        headline: 'Profitable, relevant and leading the distruption',
+        image: '/hero/hero-5.jpg',
+        imageWebp: '/hero/hero-5.webp',
+        alt: 'City skyline representing profitable and relevant growth',
       },
       {
         headline: 'Redefining The Rules Of The Game',
@@ -59,7 +56,7 @@ export const home = {
     },
     {
       title: 'Digital Transformation',
-      body: "We're stratXG-Digital – a creative digital consultancy. We've digital mindset, technical know-how and business experience to improve efficiencies.",
+      body:       "We're stratXG-Digital – a creative digital consultancy. We’ve digital mindset, technical know-how and business experience to improve efficiencies.",
     },
     {
       title: 'E-L&D',
@@ -68,37 +65,38 @@ export const home = {
   ],
 
   successPhilosophy: {
-    sectionTitle: 'Success Philosophy',
-    description:
-      'Three connected movements that keep clients profitable, relevant, and ready for change.',
+    sectionTitle: 'Success Philosophy | Approach',
     items: [
       {
         title: 'Strategy',
         image: '/images/team/strategy.jpeg',
         points: [
-          'Partnering in profitable and sustainable growth',
-          'Understanding business-critical challenges',
-          'Sustainable models — existing and new',
-          'Disrupting the competitive landscape',
+          'Partnering in Profitable and Sustainable Growth',
+          'Understanding Business Critical Challenges',
+          'Sustainable Business Model –Existing and New',
+          'Distrupting the competetive landscape',
         ],
       },
       {
         title: 'Transformation',
         image: '/images/team/transformation.jpeg',
         points: [
-          'Reworking how products and services are consumed',
-          'Adopting a digital business model end to end',
-          'Promoting digital solutions and communication',
+          'Dramatically transforming the ways in which product & services are consumed and business is conducted',
+          'Inexorably adopting a digital business model',
+          'Promoting digital solutions and ubiquitous communication mediums',
         ],
       },
       {
         title: 'Growth',
         image: '/images/team/growth.jpeg',
         points: [
-          'Higher revenues and fewer leakages',
-          'Cost optimization and productivity',
-          'Governance and continual improvement',
-          'Staying profitable and ahead of change',
+          'Leading to Higher Revenues',
+          'Eliminating Revenue Leakages',
+          'Cost Optimization & Productivity enhancement',
+          'Governance framework',
+          'Continual improvment model',
+          'Performance improvement program',
+          'To stay profitable, relevant and on the forefront of change',
         ],
       },
     ],
@@ -195,8 +193,7 @@ export const home = {
   },
 
   incubators: {
-    eyebrow: 'Our Business Association With Incubator Institutions',
-    sectionTitle: 'Incubator Partners',
+    sectionTitle: 'Our Business Association With Incubator Institutions',
     body: 'Our Proud association with Atal Incubation Center-Rabindrath Tagore University (AIC-RNTU) & Center of Social Entrepreneurship at the Tata Institute Of Social Sciences (TISS) supported by Atal Innovation Mission Of NITI Aayog',
     commitment:
       'This shows our commitment to create a sustainable change in the society/marketplace through our innovative enterprise',
@@ -225,10 +222,44 @@ export const home = {
     ],
   },
 
-  finalCta: {
-    title: 'Are You Ready to Succeed?',
-    body: 'Be ready with us — get a quote or request a conversation with our team.',
-    primary: { label: 'Get Quote', to: '/contact' },
-    secondary: { label: 'Contact us' },
+  resources: {
+    title: 'Are You Ready to Succeed? Be ready with us!',
+    items: [
+      {
+        title: 'CAMPUS TO CORPORATE BROCHURE',
+        file: '/images/Campus-To-Corporate%201.0.pdf',
+      },
+      {
+        title: 'EDUTECH BROCHURE',
+        file: '/images/StratXG_EduTech%20Profile-31st%20dec.pdf',
+      },
+      {
+        title: 'ACADEMY BROCHURE',
+        file: '/images/StratXG%20Academy%20Profile.pdf',
+      },
+      { title: 'HEALTHCARE BROCHURE', file: '/images/Healthcare.pdf' },
+      {
+        title: 'ADVANCE TRAINING',
+        file: '/images/StratXG%20Advance%20Excel%20Programme.pdf',
+      },
+      { title: 'CALENDER', file: '/images/stratxg%20Calendar.pdf' },
+      {
+        title: 'PROJECT MANAGEMENT',
+        file: '/images/StratXG%20Fundamentals%20of%20Industrial%20Projects%20and%20Tools%20Training%20%26%20Certification%20V1.0.pdf',
+      },
+      {
+        title: 'STRATXG HEALTHCARE',
+        file: '/images/STRATXG_HEALTHCARE_converted_v2.pdf',
+      },
+    ],
   },
+
+  finalCta: [
+    { title: 'Get Quote', label: 'Click Here', to: '/contact' },
+    {
+      title: 'Request Demo',
+      label: 'Request For Demo',
+      to: '/demos',
+    },
+  ],
 }

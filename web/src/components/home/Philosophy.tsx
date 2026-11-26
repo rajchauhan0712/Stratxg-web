@@ -12,8 +12,6 @@ export function Philosophy() {
   return (
     <Section
       title={successPhilosophy.sectionTitle}
-      eyebrow="Approach"
-      description={successPhilosophy.description}
     >
       <ol className="grid gap-5 md:grid-cols-3 md:gap-6">
         {successPhilosophy.items.map((item, i) => (
